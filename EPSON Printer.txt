@@ -1,0 +1,9 @@
+apt install libcupsimage2
+
+Go to
+https://support.epson.net/linux/Printer/LSB_distribution_pages/en/escpr.php
+and
+https://support.epson.net/linux/en/epsonscan2.php
+to download the software.
+
+Tbe *bundle* one need to be tar -xf ed and than execute install.sh.

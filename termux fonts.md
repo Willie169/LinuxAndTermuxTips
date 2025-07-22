@@ -1,0 +1,1 @@
+cd ~/.termux && wget https://github.com/zanjie1999/windows-fonts/raw/wine/msyh.ttc

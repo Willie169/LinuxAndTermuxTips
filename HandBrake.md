@@ -1,0 +1,1 @@
+sudo flatpak fr.handbrake.ghb -y
