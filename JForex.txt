@@ -1,1 +1,3 @@
 Go to https://www.jforex.net/, press Download for Linux, bash the downloaded shell script.
+sudo update-alternatives --config java
+choose 8
