@@ -1,0 +1,6 @@
+sudo nano /etc/bluetooth/main.conf
+
+To prevents Bluetooth from automatically re-enabling after reboot, change the AutoEnable= line to:
+AutoEnable=false
+
+sudo systemctl restart bluetooth
