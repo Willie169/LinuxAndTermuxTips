@@ -1,0 +1,26 @@
+sudo apt install datefudge
+
+
+datefudge [-s|--static] at_date program [arguments ...]
+
+
+       --static, -s
+              set date as a `static' one. The above mentioned system calls will always return the date passed as
+              a parameter of the program regardless of time passing. See EXAMPLES below.
+
+       --help, -h
+              print short usage information and exit.
+
+       --version, -v
+              print version information and exit.
+
+              
+   Basic example:
+       $ datefudge "2007-04-01 10:23" date -R
+       Sun, 01 Apr 2007 10:23:00 +0200
+
+   Non-static vs. static example:
+       $ datefudge "2007-04-01 10:23" sh -c "sleep 3; date -R"
+       Sun, 01 Apr 2007 10:23:03 +0200
+       $ datefudge --static "2007-04-01 10:23" sh -c "sleep 3; date -R"
+       Sun, 01 Apr 2007 10:23:00 +0200
