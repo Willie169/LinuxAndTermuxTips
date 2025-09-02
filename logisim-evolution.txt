@@ -1,0 +1,1 @@
+Download corresponding .deb from https://github.com/logisim-evolution/logisim-evolution and dpkg -i it.

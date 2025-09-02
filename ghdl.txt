@@ -1,0 +1,7 @@
+Download corresponding .tar.gz from https://github.com/ghdl/ghdl, tar -xvzf it, and:
+```
+sudo cp -r bin/* /usr/local/bin/
+sudo cp -r lib/* /usr/local/lib/
+sudo cp -r include/* /usr/local/include/
+sudo ldconfig
+```
