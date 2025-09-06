@@ -21,5 +21,5 @@
 9. Follow the instructions.
 10. If `Remove the installation medium and press ENTER` works, go directly to step 11; otherwise, force restarting the computer.
 11. Choose `Enroll MOK` and follow the prompts. Set a password if prompted.
-12. `Reboot`, enter the password in the blue MOK manager screen. If not prompted to set a password in step 11, enter the one you set for Secure Boot in step 5.
+12. `Reboot`, enter the password in the blue MOK manager screen. If not prompted to set a password in step 11 but prompted to enter a password here, use the one you set for Secure Boot in step 5.
 13. Boot into Linux Mint and follow the instructions. Drivers, APT repositories etc. can be set here.
