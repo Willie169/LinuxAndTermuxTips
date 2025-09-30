@@ -1,9 +1,9 @@
-## GitHub CLI
+## Git and GitHub
 ### Install git:
 ```
 apt install git
 ```
-### Install gh:
+### Install GitHub CLI:
 ```
 apt install gh
 ```
@@ -58,38 +58,96 @@ gh api \
   -f role=member
 ```
 Return JSON
+
 ### Branch management
-1. **Delete a Remote Branch**:
-   ```sh
-   git push origin --delete <branch-name>
-   ```
 
-2. **Delete a Local Branch**:
-   ```sh
-   git branch -d <branch-name>
-   ```
-
-   For force deletion, use:
-   ```sh
-   git branch -D <branch-name>
-   ```
-
-3. **Create a New Branch**:
+1. **Create a New Branch**:
    ```sh
    git checkout -b <branch-name>
    ```
 
-4. **Switch Branches**:
+2. **Switch to a Branch**:
    ```sh
    git checkout <branch-name>
    ```
 
-5. **List Branches**:
+3. **List Branches**:
    ```sh
    git branch -a
    ```
 
-6. **Create a Pull Request**:
+4. **Delete a Branch**:
+   ```sh
+   git branch -d <branch-name>
+   ```
+
+   Force deletion:
+   ```sh
+   git branch -D <branch-name>
+   ```
+
+   On remote:
+   ```sh
+   git push origin --delete <branch-name>
+   ```
+
+### Tag management
+
+
+1. **Create a New Tag**:
+
+   Lightweight tag (just a name pointing to a commit):
+   ```sh
+   git tag <tag-name>
+   ```
+   Annotated tag (includes metadata: tagger, date, message, signature):
+   ```sh
+   git tag -a <tag-name> -m <message>
+   ```
+   Annotated tag on a specific commit:
+   ```sh
+   git tag -a <tag-name> <commit-hash> -m <message>
+   ```
+2. **Push Tags to Remote**:
+   ```sh
+   git push origin <tag-name>
+   ```
+   Push all tags:
+   ```
+   git push --tags
+   ```
+
+3. **List Tags**:
+   ```sh
+   git tag
+   ```
+
+   List with filter:
+   ```sh
+   git tag -l "v1.*"
+   ```
+
+4. **Show Tag information***:
+   ```
+   git show <tag-name>
+   ```
+
+5. **Delete a Tag**:
+   ```sh
+   git tag -d <tag-name>
+   ```
+
+   On remote:
+   ```sh
+   git push origin --delete <tag-name>
+   ```
+
+6. **Checkout a tag (detached HEAD)**:
+   ```sh
+   git checkout <tag-name>
+   ```
+
+### Create a Pull Request**:
    ```sh
    gh pr create --base <base-branch> --head <branch-name> --title "<title>" --body "<description>"
    ```
