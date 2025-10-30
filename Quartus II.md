@@ -8,6 +8,6 @@ Following NTUEE SCLD standard.
 <pre><code>
 chmod +x qinst-lite-linux-24.1std-1077.run
 ./qinst-lite-linux-24.1std-1077.run</code></pre></li>
-<li>Select **Cyclone IV device support** on top of default.</li>
-<li>Click **Download & Install**.</li>
+<li>Select <strong>Cyclone IV device support</strong> on top of the default.</li>
+<li>Click <strong>Download & Install</strong>.</li>
 </ol>
