@@ -1,6 +1,6 @@
-# Windows Bootloader Recovery on Dual-Boot with Intel VMD NVMe
+# Windows Bootloader Recovery on Dual-Boot with Intel Rapid Storage Technology (RST) VMD SSD
 
-This guide helps recover Windows on dual-boot with **Intel VMD / RST NVMe SSDs**.
+This guide helps recover Windows on dual-boot with **Intel Rapid Storage Technology (RST) VMD SSDs**.
 
 ## 0. Requirements
 
