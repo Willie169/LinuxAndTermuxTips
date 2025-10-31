@@ -5,13 +5,13 @@ This guide helps recover Windows bootloader on dual-boot with **Intel Rapid Stor
 ## 0. Requirements
 
 - USB flash drive (≥8 GB, all data will be erased).
-- Another drive (no data will be erased, hereafter referred to as Another drive).
+- Another drive of type **FAT32** or **NTFS** (no data will be erased, exFAT/ext4 won't work, hereafter referred to as Another drive).
 - Any computer or Live USB of any system.
 
 Or
 
 - Bootable Windows 11 USB.
-- Compatible Intel Rapid Storage Technology (RST) VMD Driver (unzipped) in another drive (no data will be erased, hereafter referred to as Another drive).
+- Compatible Intel Rapid Storage Technology (RST) VMD Driver (unzipped) in another drive of type **FAT32** or **NTFS** (no data will be erased, exFAT/ext4 won't work, hereafter referred to as Another drive).
 
 ## 1. Creating a Bootable Windows 11 USB
 
@@ -26,7 +26,7 @@ On any computer or Live USB of any system:
 
 ## 2. Download Intel Rapid Storage Technology (RST) VMD Drive
 
-We need `.inf`, `.sys`, and `.cat` files of the Intel Rapid Storage Technology VMD Driver that is compatible with your CPU generation (e.g. 12–15th Gen) to be put in Another drive. If you already have it, skip this section.
+We need `.inf`, `.sys`, and `.cat` files of the Intel Rapid Storage Technology VMD Driver that is compatible with your CPU generation (e.g. Intel 12th–15th Gen) to be put in Another drive. If you already have it, skip this section.
 
 ```
 git clone https://github.com/sispt/Intel-Rapid-Storage-Technology-RST-VMD-Drivers-Extracted
@@ -38,7 +38,7 @@ and copy the driver folder you need to the Another drive. If not sure, copy all 
 <ol>
 <li>Insert the Bootable Windows 11 USB and boot from it.</li>
 <li>If <strong>Repair your computer</strong> is visible, click it, follow screen instructions, and ignore below steps. Otherwise, follow below steps.</li>
-<li>Click <strong>Browse</strong>, if the Windows partition is not detected, load the compatible Intel Rapid Storage Technology VMD Driver by selecting the folder containing it and pressing <strong>Install</strong> until your Windows partition (assumed (E:) here) appears. If it is detected, skip this step.</li>
+<li>Click <strong>Browse</strong>, if the Windows partition is not detected, load the compatible Intel Rapid Storage Technology VMD Driver by selecting the folder containing it and pressing <strong>Install</strong> until your Windows partition (assumed (E:) here) appears. Check **Hide drivers that aren't compatible with this computer's harware** and load the drivers that are not hidden if you aren't sure which driver(s) to load. If the Windows partition is detected, skip this step.</li>
 <li>Press <code>Shift + F10</code> to open <strong>Command Prompt</strong>.</li>
 <li>Type below line by line and press <code>enter</code>, but replace the <code>0</code> and <code>1</code> to correct numbers according to guides beneath the script:
 <pre><code>diskpart
