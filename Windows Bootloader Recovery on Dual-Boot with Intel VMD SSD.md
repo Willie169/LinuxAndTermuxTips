@@ -1,4 +1,4 @@
-# Windows Bootloader Recovery on Dual-Boot with Intel Rapid Storage Technology (RST) VMD SSD
+# Windows Bootloader Recovery on Dual-Boot with Intel VMD SSD
 
 This guide helps recover Windows on dual-boot with **Intel Rapid Storage Technology (RST) VMD SSDs**.
 
@@ -22,7 +22,7 @@ On any computer or Live USB of any system:
 1. Download the **Windows 11 ISO** from <https://www.microsoft.com/en-us/software-download/windows11>.
 2. Insert the USB flash drive.
 3. Install and open any software that can flash OS to flash drive, e.g. **balenaEtcher** (Linux, Windows, MacOS), **dd** (Linux), **Rufus** (Windows), **WoeUSB** (Linux).
-4. Flash the ISO into the USB flash drive (all data will be erased).
+4. Flash the ISO into the USB flash drive (all data will be erased). The software may show warnings, ignore it and continue flashing.
 
 ## 2. Download Intel Rapid Storage Technology (RST) VMD Drive
 
