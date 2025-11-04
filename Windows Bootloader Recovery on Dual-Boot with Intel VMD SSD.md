@@ -69,5 +69,5 @@ in the dual-booting Linux system.</li>
 2. Open **Command Prompt** as **Administrator**.
 3. Run `bcdedit /enum all`.
 4. Look for entries under `Windows Boot Loader` with `description` being the same as the stale one in the previous menu (`Windows 10/11/etc.`), `identifier` not being `{current}`, and `device` being `unknown` or non-existent partition.
-5. For each entries found in the last step, let its `identifier` be `{###}` (with `{}`), run `bcdedit /delete {###}`.
+5. For each entries found in the last step, let its `identifier` be `{###}` (with `{}`), run `bcdedit /delete {###}`. (`Ctrl C` to copy, `Ctrl V` to paste).
 6. Reboot and check. There's should no longer be multiple entries in Windows Boot Manager.
