@@ -61,3 +61,13 @@ You should see <code>Boot files successfully created</code>.</li>
 </code></pre>
 in the dual-booting Linux system.</li>
 </ol>
+
+## 4. Remove Stale Windows Entry
+
+0. Symptom: After selecting `Windows Boot Manager` in GRUB, two or more entries are shown in a blue menu.
+1. Boot into the working Windows (typically first one with a label showing which disk it's in).
+2. Open **Command Prompt** as **Administrator**.
+3. Run `bcdedit /enum all`.
+4. Look for entries under `Windows Boot Loader` with `description` being the same as the stale one in the previous menu (`Windows 10/11/etc.`), `identifier` not being `{current}`, and `device` being `unknown` or non-existent partition.
+5. For each entries found in the last step, let its `identifier` be `{###}` (with `{}`), run `bcdedit /delete {###}`.
+6. Reboot and check. There's should no longer be multiple entries in Windows Boot Manager.
