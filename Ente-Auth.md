@@ -11,3 +11,7 @@ rm ente-auth-*-x86_64.deb
 ```
 enteauth
 ```
+### Links
+- <https://f-droid.org/packages/io.ente.auth>.
+- <https://ente.io/blog/auth>.
+- <https://github.com/ente-io/ente>.
