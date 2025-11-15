@@ -115,5 +115,7 @@ update-desktop-database ~/.local/share/applications/</code></pre></li>
 43. Click `Simulation` > `Run Functional Simulation`.
 44. Click `Yes` if a pop-up window is shown asking whether to save and click `Save`. Files with extension `vwf` are used to store waveforms and can be copied and pasted to simulate existing waveforms.
 45. Close the pop-up window of `Simulation Waveform Editor`.
-46. Click `File` > `Save Project`.
-47. Close `Quartus Prime Lite Edition`.
+46. Click `File` > `Create / Update` > `Create HDL Design File from Current File…`.
+47. Check `Verilog HDL` and click `Ok`.
+48. Click `File` > `Save Project`.
+49. Close `Quartus Prime Lite Edition`.
