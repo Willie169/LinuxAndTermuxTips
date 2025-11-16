@@ -1,6 +1,6 @@
 # Quartus Prime Lite
 
-Following NTUEE SCLD standard.
+Source: NTUEE Switching Circuit and Logic Design (SCLD) course.
 
 ## Download
 
