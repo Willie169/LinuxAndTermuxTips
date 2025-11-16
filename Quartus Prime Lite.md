@@ -143,11 +143,14 @@ update-desktop-database ~/.local/share/applications/</code></pre></li>
 19. Remove `-novopt ` and save.
 20. Run functional simulation.
 21. Close `Simulation Waveform Editor`.
-22. Click `File` > `New` > `University Program VWF` > `Ok`.
-23. Click `Insert Node or Bus…` > `Node Finder…` > `List`.novopt -
-24. Select `A`, `B` of `Type` `Input Group`, `S` of `Type` `Output Group`, and `Co` of `Type` `Output`, and Ok.
-25. Set radix in `Edit` > `Radix`.
-26. Select some intervals and `Ctrl+Alt+R` to generate random values.
-27. Remove `-novopt ` and save to a new `.vwf` file.
-28. Run functional simulation.
-29. Create Verilog HDL design file from `FullAdder1.bdf` and `FA4.bdf` respectively.
+
+Optional advanced waveform:
+
+1. Click `File` > `New` > `University Program VWF` > `Ok`.
+2. Click `Insert Node or Bus…` > `Node Finder…` > `List`.novopt -
+3. Select `A`, `B` of `Type` `Input Group`, `S` of `Type` `Output Group`, and `Co` of `Type` `Output`, and Ok.
+4. Set radix in `Edit` > `Radix`.
+5. Select some intervals and `Ctrl+Alt+R` to generate random values.
+6. Remove `-novopt ` and save to a new `.vwf` file.
+7. Run functional simulation.
+8. Create Verilog HDL design file from `FullAdder1.bdf` and `FA4.bdf` respectively.
