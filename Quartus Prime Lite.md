@@ -154,3 +154,12 @@ Optional advanced waveform:
 6. Remove `-novopt ` and save to a new `.vwf` file.
 7. Run functional simulation.
 8. Create Verilog HDL design file from `FullAdder1.bdf` and `FA4.bdf` respectively.
+
+## Verilog Teatbench
+
+Create the testbench file in project directory and run:
+```
+vlib work
+vlog [all-.v-files-needed]
+vsim -c tb_MU4 -do "run -all; quit"
+```
