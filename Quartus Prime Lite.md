@@ -135,7 +135,7 @@ update-desktop-database ~/.local/share/applications/</code></pre></li>
 11. Click the symbol of an AND gate. The full adder module will be shown under `Project` and can be used.
 12. Design a four-bit parallel adder with four full adders and use `gnd_1` as a logic 0 input for `Ci` of the LSB full adder. (`vcc_1` can be used as a logic 1 input.)
 13. An array of `n` pins named `array_name` can be declared by naming each pin as `array_name[0]` to `array_name[n-1]` or naming a pin as `array_name[n-1..0]`. Both ways, the pin with index `i` is named `array_name[i]`. Declare arrays of input pins `A[3..0]`, `B[3..0]` and an array of output pins `S[3..0]`. Add an output pin `Co` for the output `Co` of the MSB full adder.
-14. A pin and a wire with the same name are linked automatically.
+14. A pin and a wire with the same name are linked automatically. Link `x`s to `A`, `y`s to `B`, and `S`s to `S` with `[0]` being the LSB.
 15. Save the file as `FA4.bdf`.
 16. Compile.
 17. Copy the given `Lab1_1.vwf` to the project folder.
