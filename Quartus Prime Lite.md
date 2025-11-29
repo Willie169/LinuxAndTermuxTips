@@ -162,5 +162,5 @@ Create the testbench file in project directory and run:
 export PATH="$PATH:$HOME/intelFPGA/20.1/modelsim_ase/bin"
 vlib [whatever_folder_name]
 vlog [all-Verilog-files-needed]
-vsim -c [testbench_file_name_without_.v] -do "run -all; quit"
+vsim -c [testbench_module_name] -do "run -all; quit"
 ```
