@@ -159,7 +159,7 @@ Optional advanced waveform:
 
 Create the testbench file in project directory and run:
 ```
-vlib work
-vlog [all-.v-files-needed]
-vsim -c tb_MU4 -do "run -all; quit"
+vlib [whatever_folder_name]
+vlog [all-Verilog-files-needed]
+vsim -c [testbench_file_name_without_.v] -do "run -all; quit"
 ```
