@@ -42,7 +42,7 @@ sudo apt install libxext6:i386 libx11-6:i386 libxft2:i386 libstdc++6:i386 libxre
 
 ## Configure ModelSim Path
 
-1. In `.bashrc`, add `~/intelFPGA/20.1/modelsim_ase/bin` to `PATH`.
+1. In `.bashrc`, add `$HOME/intelFPGA/20.1/modelsim_ase/bin` to `PATH`.
 2. Open `Quartus Prime Lite Edition`.
 3. Go to `Tools` > `Options` > `EDA Tool Options`.
 4. Set `ModelSim` to `~/intelFPGA/20.1/modelsim_ase/bin`.
@@ -159,6 +159,7 @@ Optional advanced waveform:
 
 Create the testbench file in project directory and run:
 ```
+export PATH="$PATH:$HOME/intelFPGA/20.1/modelsim_ase/bin"
 vlib [whatever_folder_name]
 vlog [all-Verilog-files-needed]
 vsim -c [testbench_file_name_without_.v] -do "run -all; quit"
