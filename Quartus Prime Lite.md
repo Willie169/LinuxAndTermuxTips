@@ -171,3 +171,4 @@ vlib [whatever_folder_name]
 vlog +notimingchecks [all-Verilog-files-needed]
 vsim -c [testbench_module_name] -do "run -all; quit"
 ```
+The modules provided by `NTUEE_LogicDesign_Lib` is in `NTUEE_LogicDesign_Lib/verilog/elements.v`.
