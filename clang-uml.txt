@@ -1,0 +1,17 @@
+bear -- [g++/clang++] [flags] -D_REENTRANT -c [cpp-file]
+clang-uml --init
+vim .clang-uml
+
+# Change to directory where compile_commands.json is
+compilation_database_dir: .
+# Change to directory where diagram should be written
+output_directory: docs/diagrams
+diagrams:
+  example_class_diagram:
+    type: class
+    glob:
+      - [file].cpp
+      - "**/*.hpp"
+
+Output in ./docs/diagrams/example_class_diagram.puml
+
