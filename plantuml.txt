@@ -1,0 +1,8 @@
+https://ctan.org/pkg/plantuml
+
+wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar -O ~/plantuml.jar
+export PLANTUML_JAR="$HOME/plantuml.jar"
+
+Run with
+
+openout_any=a lualatex -shell-escape file.tex
