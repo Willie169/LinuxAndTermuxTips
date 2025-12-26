@@ -1,7 +1,10 @@
-https://ctan.org/pkg/plantuml
-
 wget https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar -O ~/plantuml.jar
 export PLANTUML_JAR="$HOME/plantuml.jar"
+
+java -jar "$HOME/plantuml.jar" -tsvg diagrams/example_class_diagram.puml
+
+with LaTeX:
+https://ctan.org/pkg/plantuml
 
 Run with
 
