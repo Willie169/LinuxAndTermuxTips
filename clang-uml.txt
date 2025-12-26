@@ -13,5 +13,7 @@ diagrams:
       - [file].cpp
       - "**/*.hpp"
 
+clang-uml
+
 Output in ./docs/diagrams/example_class_diagram.puml
 
