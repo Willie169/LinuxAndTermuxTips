@@ -15,14 +15,22 @@ Start:
 ```
 pg_ctl -D $PREFIX/var/lib/postgresql start
 ```
+Stop:
+```
+pg_ctl -D $PREFIX/var/lib/postgresql stop
+```
 
 Environmental var:
 ```
 export PGDATA="$PREFIX/var/lib/postgresql"
 ```
-makes starting:
+makes:
 ```
-pg_ctl start
+pg_ctl
+```
+no longer need
+```
+-D $PREFIX/var/lib/postgresql
 ```
 
 Creat user:
