@@ -1,6 +1,6 @@
 # Quartus Prime Lite
 
-Source: NTUEE Switching Circuit and Logic Design (SCLD) course.
+Following NTUEE Switching Circuit and Logic Design (SCLD) course standard
 
 ## Download
 
@@ -17,6 +17,7 @@ Download Quartus Prime Lite and ModelSim installation scripts:
 chmod +x qinst-lite-linux-*std-*.run
 ./qinst-lite-linux-*std-*.run</code></pre></li>
 <li>Select <strong>Cyclone IV device support</strong> on top of the default.</li>
+<li>Check <strong>Agree to <u>Altera Software License Agreement</u></strong>.</li>
 <li>Click <strong>Download & Install</strong>.</li>
 </ol>
 
