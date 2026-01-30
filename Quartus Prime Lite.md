@@ -28,8 +28,12 @@ chmod +x qinst-lite-linux-*std-*.run
 <pre><code>
 chmod +x ModelSimSetup-*-linux.run
 ./ModelSimSetup-*-linux.run</code></pre></li>
+<li>Click <strong>Next</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
 <li>Select <strong>ModelSim - Intel FGPA Starter Edition</strong>.</li>
-<li>Download and install.</li>
+<li>Check <strong>I accept the agreement</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
 </ol>
 
 ## Install Required 32-bit X11 Libraries
@@ -50,24 +54,21 @@ sudo apt install libxext6:i386 libx11-6:i386 libxft2:i386 libstdc++6:i386 libxre
 
 ## Optional: Desktop
 
-<ol>
-<li>Run:
-<pre><code>
-vim ~/.local/share/applications/quartus.desktop</code></pre></li>
-<li>Paste:
-<pre><code>
+Run:
+```
+cat > ~/.local/share/applications/quartus.desktop <<EOF
 [Desktop Entry]
 Type=Application
-Name=Intel Quartus Prime 20.1
-Comment=Intel FPGA Design Software
+Name=Intel Quartus Prime
+Comment=Intel Quartus Prime Lite Edition Design Software
 Exec=~/altera_lite/25.1std/quartus/bin/quartus
-Icon=~/altera_lite/25.1std/quartus/adm/quartusii.png
+Icon=~/altera_lite/25.1std/quartus/common/htdocs/favicon.ico
 Terminal=false
-Categories=Development;Electronics;</code></pre></li>
-<li>Run:
-<pre><code>
-update-desktop-database ~/.local/share/applications/</code></pre></li>
-</ol>
+Categories=Development;
+EOF
+chmod +x ~/.local/share/applications/quartus.desktop
+```
+Replace `25.1` with the actual verion.
 
 ## Example: Lab0
 
