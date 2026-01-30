@@ -1,17 +1,11 @@
-# Quartus Prime Lite
+# Quartus Prime Lite Edition and ModelSim
 
-Following NTUEE Switching Circuit and Logic Design (SCLD) course standard
+This instruction follows NTUEE Switching Circuit and Logic Design (SCLD) course standard. Replace versions with the actual version of your installation.
 
-## Download
-
-Download Quartus Prime Lite and ModelSim installation scripts:
-
-- Quartus Prime Lite: <https://www.intel.com/content/www/us/en/software-kit/868560/intel-quartus-prime-lite-edition-design-software-version-25-1-for-linux.html>.
-- ModelSim: <https://www.intel.com/content/www/us/en/software-kit/750666/modelsim-intel-fpgas-standard-edition-software-version-20-1-1.html>.
-
-## Install Quartus Prime Lite
+## Install Quartus Prime Lite Edition
 
 <ol>
+<li>Download the installation script from <a href="https://www.intel.com/content/www/us/en/software-kit/868560/intel-quartus-prime-lite-edition-design-software-version-25-1-for-linux.html">https://www.intel.com/content/www/us/en/software-kit/868560/intel-quartus-prime-lite-edition-design-software-version-25-1-for-linux.html</a>.</li>
 <li>Run:
 <pre><code>
 chmod +x qinst-lite-linux-*std-*.run
@@ -24,6 +18,7 @@ chmod +x qinst-lite-linux-*std-*.run
 ## Install ModelSim
 
 <ol>
+<li>Download the installation script from <a href="https://www.intel.com/content/www/us/en/software-kit/750666/modelsim-intel-fpgas-standard-edition-software-version-20-1-1.html">https://www.intel.com/content/www/us/en/software-kit/750666/modelsim-intel-fpgas-standard-edition-software-version-20-1-1.html</a>.</li>
 <li>Run:
 <pre><code>
 chmod +x ModelSimSetup-*-linux.run
@@ -36,7 +31,7 @@ chmod +x ModelSimSetup-*-linux.run
 <li>Click <strong>Next</strong>.</li>
 </ol>
 
-## Install Required 32-bit X11 Libraries
+## Install Required Libraries
 
 Run:
 ```
@@ -45,30 +40,28 @@ sudo apt update
 sudo apt install libxext6:i386 libx11-6:i386 libxft2:i386 libstdc++6:i386 libxrender1:i386 libfontconfig1:i386
 ```
 
-## Configure ModelSim Path
-
-1. In `.bashrc`, add `$HOME/intelFPGA/20.1/modelsim_ase/bin` to `PATH`.
-2. Open `Quartus Prime Lite Edition`.
-3. Go to `Tools` > `Options` > `EDA Tool Options`.
-4. Set `ModelSim` to `~/intelFPGA/20.1/modelsim_ase/bin`.
-
-## Optional: Desktop
+## Desktop
 
 Run:
 ```
 cat > ~/.local/share/applications/quartus.desktop <<EOF
 [Desktop Entry]
 Type=Application
-Name=Intel Quartus Prime
+Name=Quartus Prime Lite Edition
 Comment=Intel Quartus Prime Lite Edition Design Software
-Exec=~/altera_lite/25.1std/quartus/bin/quartus
-Icon=~/altera_lite/25.1std/quartus/common/htdocs/favicon.ico
+Exec=$HOME/altera_lite/25.1std/quartus/bin/quartus
+Icon=$HOME/altera_lite/25.1std/quartus/adm/quartusii.png
 Terminal=false
 Categories=Development;
 EOF
-chmod +x ~/.local/share/applications/quartus.desktop
 ```
-Replace `25.1` with the actual verion.
+
+## Configure ModelSim Path
+
+1. In `.bashrc`, add `$HOME/intelFPGA/20.1/modelsim_ase/bin` to `PATH`.
+2. Open `Quartus Prime Lite Edition`.
+3. Go to `Tools` > `Options` > `EDA Tool Options`.
+4. Set `ModelSim` to `~/intelFPGA/20.1/modelsim_ase/bin`.
 
 ## Example: Lab0
 
@@ -174,3 +167,4 @@ vlog +notimingchecks [all-Verilog-files-needed]
 vsim -c [testbench_module_name] -do "run -all; quit"
 ```
 The modules provided by `NTUEE_LogicDesign_Lib` is in `NTUEE_LogicDesign_Lib/verilog/elements.v`.
+
