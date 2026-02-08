@@ -1,8 +1,12 @@
 cd ~
-sudo apt install build-essential cmake git ghc libeigen3-dev libopenblas-dev libzip-dev ninja-build wget -y
+sudo apt install build-essential clinfo cmake git ghc libeigen3-dev libopenblas-dev libzip-dev ninja-build wget -y
 git clone https://github.com/lightvector/KataGo.git
 cd KataGo/cpp
+if [ -n "$(clinfo -l | grep '#0')" ]; then
+cmake . -G Ninja -DUSE_BACKEND=OPENCL
+else
 cmake . -G Ninja -DUSE_BACKEND=EIGEN
+fi
 ninja
 cd ../..
 mkdir kata-models
