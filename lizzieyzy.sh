@@ -11,13 +11,13 @@ cat > ~/.local/share/applications/lizzieyzy.desktop <<EOF
 Type=Application
 Name=LizzieYzy
 Comment=LizzieYzy - GUI for Game of Go
-Exec=sh -c 'cd .lizzieyzy && java -jar $HOME/lizzieyzy/target/lizzie-yzy2.5.3-shaded.jar'
+Exec=sh -c 'cd $HOME/.lizzieyzy && java -jar "$HOME/lizzieyzy/target/lizzie-yzy2.5.3-shaded.jar"'
 Icon=$HOME/lizzieyzy/src/main/resources/assets/logo.png
 Terminal=false
 Categories=Game;
 StartupWMClass=featurecat-lizzie-Lizzie
 EOF
 ## Run with
-# java -jar lizzieyzy/target/lizzie-yzy2.5.3-shaded.jar
+# cd $HOME/.lizzieyzy && java -jar "$HOME/lizzieyzy/target/lizzie-yzy2.5.3-shaded.jar"
 ## You may set an alias for it. Example:
-# alias lizzieyzy='java -jar $HOME/lizzieyzy/target/lizzie-yzy2.5.3-shaded.jar'
+# alias lizzieyzy='cd $HOME/.lizzieyzy && java -jar "$HOME/lizzieyzy/target/lizzie-yzy2.5.3-shaded.jar"'
