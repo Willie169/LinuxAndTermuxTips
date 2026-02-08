@@ -1,7 +1,6 @@
 cd ~
 git clone https://github.com/yzyray/lizzieyzy.git
 cd lizzieyzy
-git checkout 2.5.3
 mvn clean package
 cd ..
 mkdir .lizzieyzy
