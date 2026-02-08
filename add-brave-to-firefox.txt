@@ -1,0 +1,4 @@
+# Add Brave search engine to Firefox
+Add search engine
+Name: Brave
+Searching string URL: https://search.brave.com/search?q=%s
