@@ -12,7 +12,7 @@ wget https://media.katagotraining.org/uploaded/networks/models/kata1/kata1-b6c96
 ## https://katagotraining.org/networks
 cd ..
 ## Executable at $HOME/KataGo/cpp/katago. Example:
-# $HOME/KataGo/cpp/katago gtp -model $HOME/kata-models/kata1-b6c96-s175395328-d26788732.txt.gz -config /root/KataGo/cpp/configs/gtp_example.cfg
+# $HOME/KataGo/cpp/katago gtp -model $HOME/kata-models/kata1-b6c96-s175395328-d26788732.txt.gz -config $HOME/KataGo/cpp/configs/gtp_example.cfg
 ## You may add $HOME/KataGo/cpp/katago to PATH
 ## You may set default cfg in KataGo/cpp/default_gtp.cfg. Example:
 # cp $HOME/KataGo/cpp/configs/gtp_example.cfg $HOME/KataGo/cpp/default_gtp.cfg
