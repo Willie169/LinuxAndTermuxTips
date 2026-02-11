@@ -3,6 +3,17 @@ git clone https://github.com/hotfics/Sylvan.git
 cd Sylvan
 qmake
 make
+mkdir -p ~/.local/share/applications
+cat > ~/.local/share/applications/Sylvan.desktop <<EOF
+[Desktop Entry]
+Type=Application
+Name=Sylvan
+Comment=Sylvan - GUI for Playing Xiangqi
+Exec=$HOME/Sylvan/projects/gui/sylvan
+Icon=$HOME/Sylvan/projects/gui/res/icons/app.ico
+Terminal=false
+Categories=Game;
+EOF
 ## Executable at
 # $HOME/Sylvan/projects/gui/sylvan
 # $HOME/Sylvan/projects/cli/sylvan-cli

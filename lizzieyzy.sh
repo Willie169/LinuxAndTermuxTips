@@ -18,5 +18,5 @@ StartupWMClass=featurecat-lizzie-Lizzie
 EOF
 ## Run with
 # cd $HOME/.lizzieyzy && java -jar "$HOME/lizzieyzy/target/lizzie-yzy2.5.3-shaded.jar"
-## You may set an alias for it. Example:
+## You may set an alias for it
 # alias lizzieyzy='cd $HOME/.lizzieyzy && java -jar "$HOME/lizzieyzy/target/lizzie-yzy2.5.3-shaded.jar"'
