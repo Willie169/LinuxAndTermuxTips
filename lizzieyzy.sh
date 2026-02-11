@@ -2,7 +2,7 @@ cd ~
 git clone https://github.com/yzyray/lizzieyzy.git
 cd lizzieyzy
 mvn clean package
-cd ..
+cd ~
 mkdir .lizzieyzy
 mkdir -p ~/.local/share/applications
 cat > ~/.local/share/applications/lizzieyzy.desktop <<EOF
