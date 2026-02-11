@@ -5,6 +5,7 @@ mkdir build
 cd build
 cmake -G Ninja ..
 ninja
+cd ~
 mkdir -p ~/.local/share/applications
 cat > ~/.local/share/applications/cutechess.desktop <<EOF
 [Desktop Entry]

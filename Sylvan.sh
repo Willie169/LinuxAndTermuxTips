@@ -3,6 +3,7 @@ git clone https://github.com/hotfics/Sylvan.git
 cd Sylvan
 qmake
 make
+cd ~
 mkdir -p ~/.local/share/applications
 cat > ~/.local/share/applications/Sylvan.desktop <<EOF
 [Desktop Entry]
