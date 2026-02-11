@@ -11,7 +11,4 @@ ARCH="armv7"
 fi
 make -j ARCH="$ARCH" profile-build largeboards=yes nnue=yes
 ## Executable at
-# ~/Fairy-Stockfish/src/stockfish
-## XBoard
-# xboard -fcp=$HOME/Fairy-Stockfish/src/stockfish -smpCores $(nproc) -variant chess
-# xboard -fcp=$HOME/Fairy-Stockfish/src/stockfish -smpCores $(nproc) -variant xiangqi
+# $HOME/Fairy-Stockfish/src/stockfish
