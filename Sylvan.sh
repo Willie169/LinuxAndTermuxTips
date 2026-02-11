@@ -1,4 +1,4 @@
-sudo apt install git build-essential cmake ninja-build qtbase5-dev qtbase5-dev-tools libqt5svg5-dev qtchooser qt5-qmake -y
+sudo apt install git build-essential cmake ninja-build qtbase5-dev qtbase5-dev-tools libqt5svg5-dev -y
 git clone https://github.com/hotfics/Sylvan.git
 cd Sylvan
 qmake
