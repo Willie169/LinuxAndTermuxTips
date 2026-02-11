@@ -5,7 +5,7 @@ qmake
 make
 cd ~
 mkdir -p ~/.local/share/applications
-cat > ~/.local/share/applications/Sylvan.desktop <<EOF
+cat > ~/.local/share/applications/sylvan.desktop <<EOF
 [Desktop Entry]
 Type=Application
 Name=Sylvan
