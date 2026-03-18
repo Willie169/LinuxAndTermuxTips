@@ -19,30 +19,74 @@
 2. Go to the installation directory, `cd Vivado/2025.2/scripts` with `2025.2` replaced with the actual version installed.
 2. Run `sudo ./installLibs.sh`.
 
-## Create Project for 臺灣大學電機系電路學實驗
+## USB Permission
+
+Run
+```
+sudo tee /etc/udev/rules.d/52-xilinx-usb.rules <<'EOF'
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0666", GROUP="plugdev"
+EOF
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+sudo usermod -aG plugdev $USER
+newgrp plugdev
+```
+
+## Create Project
 
 1. Click `Create Project` under `Quick Start`.
 2. Click `Next`.
 2. Set `Project location` at your will.
 2. Click `Next` 4 times.
-2. `Search` `xc7a35tlcsg324-2L`.
-2. Click the `xc7a35tlcsg324-2L` row.
+2. Search your device (e.g., `xc7a35tlcsg324-2L`) and click that row.
 2. Click `Next`.
 2. Click `Finish`.
-2. Copy `1 Source` and `2 Constraint` to project location.
+2. Copy your source and constraints to project directory.
 2. Click `Add Sources` under `PROJECT MANAGER`.
 2. Select `Add or create design sources`.
 2. Click `Next`.
 2. Click `Add Files`.
-2. Go to `1 Source/dont touch`.
-2. `Ctrl + A`.
+2. Select your sources (`.v`).
 2. Click `OK`.
 2. Click `Finish`.
 2. Click `Add Sources` under `PROJECT MANAGER`.
 2. Select `Add or create constraints`.
 2. Click `Next`.
 2. Click `Add Files`.
-2. Go to `2 Constraint`.
-2. Select `EGO1.xdc`.
+2. Select your constraints (`.xdc`).
 2. Click `OK`.
 2. Click `Finish`.
+
+## Simulation
+
+1. [Create Project](#create-project).
+2. Click `Add Sources` under `PROJECT MANAGER`.
+2. Select `Add or create simulation sources`.
+2. Click `Next`.
+2. Click `Add Files`.
+2. Select your simulation sources (`.v`).
+2. Click `OK`.
+2. Click `Finish`.
+2. Select `Hierarchy` under souces.
+2. Expand `Simulation Sources` > `sim_1`, right-click your main simulation source, if `Set as Top` is bright, click it; otherwise, skip this step.
+2. Click `Run Simulation` under `SIMULATION`.
+2. Click `Run Behavioral Simulation`.
+
+## Program Device
+
+1. [USB Permission](#usb-permission).
+2. [Create Project](#create-project).
+2. Click `Generate Bitstream` under `PROGRAM AND DEBUG`.
+2. Click `Yes`.
+2. Click `OK`.
+2. Wait until `Bitstream Generation Completed` and click `OK`.
+2. Click `Open Hardware Manager` under `PROGRAM AND DEBUG`.
+2. Click `Open Target` under `Open Hardware Manager` under `PROGRAM AND DEBUG`, and select `Open New Target`.
+2. Click `Next` twice.
+2. Click your device under `Hardware Targets`.
+2. Click `Next`.
+2. Click `Finish`.
+2. Click `Program Device` under `Open Hardware Manager` under `PROGRAM AND DEBUG`.
+2. Click the three dots in the right of `Bitstream file` and select the `<project_name>.runs/impl_1/<file_name>.bit` under project directory.
+2. Click `Program`.
+2. Test your design on your device.
