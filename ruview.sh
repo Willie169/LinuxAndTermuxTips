@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Installs [RuView](https://github.com/ruvnet/RuView) from source (Rust), which requires approximately 13.8 GB storage. The binaries are at `~/RuView/v2/target/release`, which has been added to `$PATH` in [`install-tools-first.sh`](install-tools-first.sh). See <https://github.com/ruvnet/RuView/blob/main/docs/user-guide.md> for more information.
+# Installs [RuView](https://github.com/ruvnet/RuView) from source (Rust), which requires approximately 13.8 GB storage. See <https://github.com/ruvnet/RuView/blob/main/docs/user-guide.md> for more information.
 
 cd ~ || exit
 sudo apt update
