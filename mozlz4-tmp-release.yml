@@ -1,0 +1,68 @@
+name: release
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+          - os: ubuntu-latest
+            target: x86_64-unknown-linux-musl 
+          - os: ubuntu-latest
+            target: x86_64-linux-android 
+          - os: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-gnu
+          - os: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-musl 
+          - os: ubuntu-24.04-arm
+            target: aarch64-linux-android 
+          - os: windows-latest
+            target: x86_64-pc-windows-msvc
+          - os: macos-latest
+            target: x86_64-apple-darwin
+          - os: macos-latest
+            target: aarch64-apple-darwin
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: actions/checkout@v4
+      - uses: houseabsolute/actions-rust-cross@v1 
+        with:
+          command: build
+          target: ${{ matrix.target }}
+          args: "--release"
+      - name: Package
+        shell: bash
+        run: |
+          mkdir dist
+          if [ "${{ matrix.target }}" = "x86_64-pc-windows-msvc" ]; then
+            cp "target/${{ matrix.target }}/release/mozlz4-bin.exe" dist/
+            cd dist
+            mv mozlz4-bin.exe mozlz4-${{ matrix.target }}.exe
+          else
+            cp "target/${{ matrix.target }}/release/mozlz4-bin" dist/
+            cd dist
+            mv mozlz4-bin mozlz4-${{ matrix.target }}
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mozlz4-${{ matrix.target }} 
+          path: dist/mozlz4-${{ matrix.target }}*
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          gh release create "${{ github.ref_name }}" dist/* --title "${{ github.ref_name }}" --notes ''
