@@ -20,4 +20,4 @@
 20. Sidebar > Audience > Publish app.
 21. Paste Client ID and secret to rclone.
 22. Scope: drive.
-23. Login and grant access. The confirmation screens will warn about that the app hasn't been verified by Google. Don't care about it.
+23. Login and allow access. The confirmation screens will warn about that the app hasn't been verified by Google. Don't care about it.
