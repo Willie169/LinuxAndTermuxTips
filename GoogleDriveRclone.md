@@ -1,5 +1,5 @@
 1. Go to <https://console.developers.google.com> and login.
-2. Create a project.
+2. Create a project and go into it.
 3. Enable APIs and services > Google Drive API > Enable.
 4. Sidebar > Credentials
 5. Configure consent screen.
