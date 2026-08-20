@@ -1,23 +1,23 @@
-1. Go to <https://console.developers.google.com> and login. This account theoretically doesn't need to be the account you want to access from rclone, but sometimes it may stuck at the confirmation screen later when using a different account.
-3. Create a project and go into it.
-4. Enable APIs and services > Google Drive API > Enable.
-5. Sidebar > Credentials
-6. Configure consent screen.
-7. Get started.
-8. App name can be anything. User Support Email can be your own Gmail.
-9. Audience > External.
-10. Sidebar > Data Access > Add or remove scopes.
-11. Manually add scopes > paste `https://www.googleapis.com/auth/docs` > Add to table.
-12. Manually add scopes > paste `https://www.googleapis.com/auth/drive` > Add to table.
-13. Update.
-14. Save.
-15. Sidebar > Audience > Add users.
-16. Add your own Gmail > Save.
-17. Sidebar > Overview > Create OAuth client.
-18. Application type: Desktop app.
-19. Create.
-20. Copy and backup Client ID and Client secret. They will be used in rclone.
-21. Sidebar > Audience > Publish app.
-22. Paste Client ID and secret to rclone.
-23. Scope: drive.
-24. Login and allow access. The confirmation screens will warn about that the app hasn't been verified by Google. Don't care about it.
+1. Go to <https://console.developers.google.com> and login. This account doesn't need to be the account you want to access from rclone.
+2. Create a project and go into it.
+3. Enable APIs and services > Google Drive API > Enable.
+4. Sidebar > Credentials
+5. Configure consent screen.
+6. Get started.
+7. App name can be anything. User Support Email can be your own Gmail.
+8. Audience > External.
+9. Sidebar > Data Access > Add or remove scopes.
+10. Manually add scopes > paste `https://www.googleapis.com/auth/docs` > Add to table.
+11. Manually add scopes > paste `https://www.googleapis.com/auth/drive` > Add to table.
+12. Update.
+13. Save.
+14. Sidebar > Audience > Add users.
+15. Add your own Gmail > Save.
+16. Sidebar > Overview > Create OAuth client.
+17. Application type: Desktop app.
+18. Create.
+19. Copy and backup Client ID and Client secret. They will be used in rclone.
+20. Sidebar > Audience > Publish app.
+21. Paste Client ID and secret to rclone.
+22. Scope: drive.
+23. Login and allow access. The confirmation screens will warn about that the app hasn't been verified by Google. Don't care about it.
