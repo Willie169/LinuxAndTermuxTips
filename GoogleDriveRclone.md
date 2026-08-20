@@ -1,4 +1,4 @@
-1. Go to <https://console.developers.google.com> and login.
+1. Go to <https://console.developers.google.com> and login to any Google account. This doesn't need to be the account you want to access from rclone.
 2. Create a project and go into it.
 3. Enable APIs and services > Google Drive API > Enable.
 4. Sidebar > Credentials
@@ -20,4 +20,4 @@
 20. Sidebar > Audience > Publish app.
 21. Paste Client ID and secret to rclone.
 22. Scope: drive.
-23. Login and allow access.
+23. Login and grant access. The confirmation screens will show warnings about application not verified. Don't care about it.
